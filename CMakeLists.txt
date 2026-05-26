@@ -61,7 +61,6 @@ install(EXPORT print-config DESTINATION cmake)
 
 if(BUILD_TESTS)
   enable_testing()
-  FetchContent_MakeAvailable(googletest)
   file(GLOB ${PROJECT_NAME}_TEST_SOURCES tests/*.cpp)
   add_executable(check ${${PROJECT_NAME}_TEST_SOURCES})
   target_link_libraries(check ${PROJECT_NAME} GTest::main)
